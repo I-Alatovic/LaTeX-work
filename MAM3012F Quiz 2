@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+
+\title{Quiz 2}
+\author{Isa Alatovic | ALTISA001}
+\date{27 February 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Question 1}
+
+Let 
+\[
+Y = \{X \subseteq [11] : 7 \le |X| \le 10 \}.
+\]
+That is, \(Y\) is the collection of all subsets of \([11]\) whose cardinality is 7, 8, 9, or 10.\\
+
+
+\noindent
+To determine \(|Y|\), we count the number of ways to choose 7, 8, 9, or 10 elements from an 11-element set. Hence,
+\[
+|Y| = \binom{11}{7} + \binom{11}{8} + \binom{11}{9} + \binom{11}{10} = 330 + 165 + 55 + 11 = 561.
+\]
+
+\section*{Question 2}
+
+Let
+\[
+\begin{aligned}
+P &= \{ X \subseteq [15] : |X| = 3 \}, \\
+A &= \{ X \subseteq [19] : |X| = 4 \}.
+\end{aligned}
+\]
+where $P$ and $A$ represent all possible selections of 3 pure and 4 applied mathematicians, respectively (assuming that each mathematician has been assigned an index).\\
+
+\noindent
+It follows then that the set of all possible selections consisting of 3 pure mathematicians together with 4 applied mathematicians is given by the Cartesian product
+\[
+P \times A = \{ (X,Y) \mid X \in P,\, Y \in A \}.
+\]
+
+\noindent
+Consequently, using the multiplication principle, the number of such selections is
+\[
+|P \times A| = |P| \cdot |A| = \binom{15}{3} \cdot \binom{19}{4} = 455 \cdot 3876 = 1763580.
+\]
+
+\end{document}

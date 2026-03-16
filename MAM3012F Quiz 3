@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{Quiz 3}
+\author{Isa Alatovic | ALTISA001}
+\date{March 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Question 1}
+We can consider the word "BOOKKEEPER" as a multiset:
+\[
+M = [B, O, O, K, K, E, E, P, E, R]
+\]
+with each word using all the letters of "BOOKKEEPER" exactly once as a permutation of this multiset. Noticing that $|M|=10$, 'O' is repeated twice, 'K' is repeated twice, 'E' is repeated three times, and the other letters are not repeated, we can calculate the number of permutations of $M$:
+\[
+\text{Number of permutations =} \frac{10!}{2!2!3!1!1!1!} = 151200
+\]
+
+\section*{Question 2}
+Let $A \subset \mathbb{Z}$ have $|A| = 7$. Recall that the integers modulo 6 $\mathbb{Z}_6 = \{\bar{0}, \bar{1}, \bar{2}, \bar{3}, \bar{4}, \bar{5}\}$ is the set of all residue classes modulo 6, where:
+\[
+\bar{a} = \{x \in \mathbb{Z} : x \equiv a \ \text{(mod n)} \} \  \text{for} \ a \in \{0, 1, ..., 5\}
+\]
+and each residue class $\bar{0}, \bar{1}, ..., \bar{5}$ is distinct, i.e: 
+\[
+\bar{a} \cap \bar{b} = \emptyset \ \forall \ a, b \in \{0, 1, 2, 3, 4, 5\},\\a \neq b
+\]
+
+Let $p = |A| = 7$ and $h = |\mathbb{Z}_6| = 6$ (where $p$ represents the 'pigeons' and $h$ the 'holes'). We then assign the 'pigeons' to the 'holes', so we assign each of the integers in $A$ to their corresponding residue class modulo 6 in $\mathbb{Z}_6$ (remember that we can do this since each of the residue classes are distinct). By the Pigeonhole Principle, since $p > h$, there is a 'hole' with at least two 'pigeons', so there exists a residue class modulo 6 containing at least two elements of $A$, say $x$ and $y$, which are obviously distinct ($x \neq y$), and since they are both in the same residue class, we have $x \equiv y \ \text{(mod 6)} \Leftrightarrow x - y \equiv 0\ \text{(mod 6)}$, completing the proof.
+
+
+\end{document}

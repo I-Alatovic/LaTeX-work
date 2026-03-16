@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Quiz 1}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\author{Isa Alatovic | ALTISA001}
+\date{18 February 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Question 1}
+Let \(f : \mathcal{P}([n])\rightarrow\{0,1\}^n\) for some \(n\in\mathbb{N}\) and \(b\in\{0,1\}^n\),
+where \(b_i\) represents the \(i^{th}\) digit of \(b\). We define \(f\) by:
+
+\begin{center}
+    \(f(A) = b_A \ \quad \forall \ A \in\mathcal{P}([n])\)\\
+    where \(b_{A_i} = \begin{cases} 
+        1 & \text{if } i \in A \\
+        0 & \text{otherwise}
+    \end{cases}\)
+\end{center}
+We show that \(f\) is a bijection:
+\begin{itemize}
+    \item First, we show that \(f\) is an injection:\\
+        Let \(A, A' \in \mathcal{P}([n])\) and suppose that \(f(A) = f(A')\):
+            \begin{equation*}
+            \begin{split}
+                f(A) = f(A') & \Rightarrow b_A = b_{A'}\\
+                & \Rightarrow b_{A_i} = b_{A'_i} \quad \forall \ i \in [n]\\
+                & \Rightarrow i \in A \Leftrightarrow i \in A' \ \text{and}\ i \notin A \Leftrightarrow i \notin A' \quad \forall \ i \in [n]\\
+                & \Rightarrow A \subseteq A'\ \text{and} \ A' \subseteq A\\
+                & \Rightarrow A = A'
+            \end{split}
+            \end{equation*}
+        Therefore, \(f\) is an injection.
+    \item Next, we show that $f$ is a surjection:\\
+        Let $b \in \{0,1\}^n$ and $A = [n]$. Define $A'$ by:
+        \begin{equation*}
+            A' = A \setminus \{i:b_i = 0 \quad \forall \ i \in [n]\}
+        \end{equation*}
+        So $A' \subseteq A \Rightarrow A' \in \mathcal{P}([n])$ and $f(A') = b$, so f is a surjection.
+    \item Therefore, since $f$ is both an injection and a surjection, f is a bijection.   
+\end{itemize}
+(Question 2 on next page)
+\pagebreak
+\section*{Question 2}
+$(7)_3 = \frac{7!}{(7-3)!} = \frac{7!}{4!} = 7 \cdot 6 \cdot 5 = 210$
+
+\end{document}
